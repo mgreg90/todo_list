@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<div class="container">
+  <div class="header">
+    <iframe src="https://calendar.google.com/calendar/embed?height=450&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=wyncode.co_j345ngrgjt8m78gq8b21m4a3bc%40group.calendar.google.com&amp;color=%2342104A&amp;src=wyncode.co_ekc2rjqf6nn6blib3ghun898eo%40group.calendar.google.com&amp;color=%23865A5A&amp;ctz=America%2FNew_York" style="border-width:1" width="1000" height="450" frameborder="0" scrolling="no"></iframe>
+  </div>
+  <h1>What's on the Agenda?</h1>
+  <%= button_to 'Add New Task', new_todo_item_path, method: :get, class: 'button_link' %>
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th>Task</th>
+        <th>Priority</th>
+        <th colspan="4"></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @todo_items.each do |todo_item| %>
+      <tr>
+        <td><%= todo_item.description %></td>
+        <td><%= todo_item.priority %></td>
+        <td><%= button_to 'Show', todo_item, method: :get, class: 'button_table' %><td>
+        <td><%= button_to 'Edit', edit_todo_item_path(todo_item), method: :get, class: 'button_table' %></td>
+        <td><%= button_to 'Delete', todo_item, method: :delete, data: { confirm: 'Are you sure?' }, class: 'button_table' %></td>
+      </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+  <br>
+
+</div>

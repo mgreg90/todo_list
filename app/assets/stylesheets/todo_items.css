@@ -1,0 +1,92 @@
+/*
+  Place all the styles related to the matching controller here.
+  They will automatically be included in application.css.
+*/
+h1 {
+  text-align: center;
+  padding: 1em;
+  font-family: "Times New Roman", serif;
+  font-size: 36pt;
+}
+
+table {
+  /*margin: 5em 5em 0 5em;*/
+  width: 70%;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+a {
+  color: black !important;
+}
+a:hover {
+  background-color: transparent;
+  color: #666;
+  text-decoration: none;
+}
+
+button {
+  width: 200px;
+}
+
+div > button {
+  margin-bottom: 1em;
+
+}
+
+td button {
+  width: 100px;
+}
+
+body {
+  background: linear-gradient(180deg, white, cyan);
+  min-height: 100vh;
+}
+
+.table > tbody > tr > td {
+  border-top: 1px solid black;
+  font-size: 14pt;
+}
+
+.table > thead > tr > th {
+  border-bottom: 2px solid black;
+}
+
+th {
+  font-size: 20pt;
+  font-family: "Times New Roman", serif;
+}
+
+.header {
+  height: 450px;
+  display: flex;
+  justify-content: center;
+}
+
+iframe {
+  margin: 2em 0 0 0;
+}
+
+.new_container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 43vw;
+}
+
+.button_table {
+  width: 100px;
+}
+
+.button_link {
+  width: 200px;
+}
+
+.back_submit_buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}

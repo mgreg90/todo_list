@@ -1,0 +1,17 @@
+<div class="container">
+  <p id="notice"><%= notice %></p>
+
+  <p>
+    <strong>Description:</strong>
+    <%= @todo_item.description %>
+  </p>
+
+  <p>
+    <strong>Priority:</strong>
+    <%= @todo_item.priority %>
+  </p>
+  <div class = "back_submit_buttons">
+    <%= button_to 'Edit', edit_todo_item_path(@todo_item), method: :get %> |
+    <%= button_to 'Back', todo_items_path, method: :get %>
+  </div>
+</div>
